@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>My Portfolio</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/my.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+      <div class='row'>
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Tatiana Morozova</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#section1">Home</a></li>
+            <li><a href="#section2">About</a></li>
+            <li><a href="#section3">Portfolio<span class="glyphicon glyphicon-grain"></span></a></li>
+            <li><a href="#section4">Contacts</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div id="section1" class="container-fluid">
+    <div class="row">
+      <div class="col-md-6">
+        <h2>Everything is a work in progress.</h2>
+        <p>
+          Welcome to my site. I am a web-developer and I have a passion to solve problems and provide solutions that are simple and elegant.
+        </p>
+      </div>
+    </div>
+      <a href="https://github.com/tabobo" target="_blank" class="btn btn-primary">Github</a>
+      <a href="https://ru.linkedin.com/in/tatianamorozova
+" target="_blank" class="btn btn-primary">Linkedin</a>
+      <a href="http://www.freecodecamp.com/tabobo" target="_blank" class="btn btn-primary">FreeCodeCamp</a>
+  </div>
+
+  <div class="container-fluid">
+    <div class="row img">
+      <div class="full"></div>
+    </div>
+  </div>
+
+  <div id="section2" class="container-fluid">
+    <div class="row">
+      <div class="col-md-6">
+        <h2>About</h2>
+        <p> My name is Tatiana. I'm educated as an web designer and now I am self-taught developer based in Saint-Petersburg, Russia.</br>
+            <p>I love to build for the web and I'm always looking for new experiences.
+            I believe there's an opportunity to create something beautiful and unique with every project.</br>
+            I can create websites and web-applications which are fast, responsive, elegant, easy to use and made with love.</p>
+
+        <p> Please feel free to check out some projects I've been working on.</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="section3" class="container-fluid">
+    <div class="row">
+      <div class="col-md-6 caption-style-1">
+        <img class='img-responsive' src="images/11.png" alt="Wikipedia Search Engine" />
+        <div class="caption">
+          <div class="blur"></div>
+          <div class="caption-text">
+            <h1>Wikipedia Search Engine</h1>
+            <p>Bootstrap and jQuery</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 caption-style-1">
+        <img class='img-responsive' src="images/12.png" alt="Stainless Steel Calculator" />
+        <div class="caption">
+          <div class="blur"></div>
+          <div class="caption-text">
+            <h1>Stainless Steel Calculator</h1>
+            <p>SCSS and Vanilla Javascript</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 caption-style-1">
+        <img class='img-responsive' src="images/12.png" alt="Twitch.tv API project" />
+        <div class="caption">
+          <div class="blur"></div>
+          <div class="caption-text">
+            <h1>Twitch.tv API project</h1>
+            <p>Bootstrap and Angularjs</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 caption-style-1">
+        <img class='img-responsive' src="images/11.png" alt="Weather App" />
+        <div class="caption">
+          <div class="blur"></div>
+          <div class="caption-text">
+            <h1>Weather App</h1>
+            <p>Bootstrap and Vanilla Javascript</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="section4" class='container-fluid'>
+    <div class="row">
+    <h2>Contact me</h2>
+      <p>Have a project you’re interested in discussing with me? </br> Write me a letter, I’d love to talk.</p>
+      <a class="mail" href="mailto:tabobo@mail.ru">tabobo@mail.ru</a>
+      <p>Or connect me through social media:</p>
+      <a href="https://github.com/tabobo" target="_blank" class="btn btn-primary2">Github</a>
+      <a href="https://ru.linkedin.com/in/tatianamorozova" target="_blank" class="btn btn-primary2">Linkedin</a>
+      <a href="http://www.freecodecamp.com/tabobo target="_blank" class="btn btn-primary2">FreeCodeCamp</a>
+      <p class="copy">© 2015 Tatiana Morozova. All Rights Reserved</p>
+    </div>
+  </div>
+
+  <script>
+  $(document).ready(function(){
+    // Add scrollspy to <body>
+    $('body').scrollspy({target: ".navbar", offset: 50});
+
+    // Add smooth scrolling on all links inside the navbar
+    $("#myNavbar a").on('click', function(event) {
+
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    });
+  });
+  </script>
+</body>
+
+</html>
